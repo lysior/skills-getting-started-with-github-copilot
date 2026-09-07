@@ -70,7 +70,7 @@ jobs:
       - name: Check if app.js was modified
         id: check-app-js
         continue-on-error: true
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           TARGET_FILE: src/static/app.js
@@ -85,7 +85,7 @@ jobs:
       - name: Check if styles.css was modified
         id: check-styles-css
         continue-on-error: true
-        uses: actions/github-script@v7
+        uses: actions/github-script@v8
         env:
           CHANGED_FILES: ${{ steps.changed-files.outputs.all_changed_files }}
           TARGET_FILE: src/static/styles.css
